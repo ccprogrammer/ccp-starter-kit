@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:ccp_starter/example/helper/helper.dart';
 import 'package:ccp_starter/example/themes/example_insets.dart';
 import 'package:ccp_starter/example/themes/example_color.dart';
@@ -68,9 +66,6 @@ class ExampleChartState extends State<ExampleChart> {
           )
           .toList(),
     ];
-    for (var item in items) {
-      log('item: $item');
-    }
 
     rawBarGroups = items;
     showingBarGroups = rawBarGroups;
