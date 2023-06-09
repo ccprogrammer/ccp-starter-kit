@@ -1,5 +1,6 @@
 import 'package:ccp_starter/example/data/dummy_data.dart';
 import 'package:ccp_starter/example/themes/example_color.dart';
+import 'package:ccp_starter/example/ui/components/example_app_bar/example_custom_app_bar.dart';
 import 'package:ccp_starter/example/ui/components/example_chart/example_chart.dart';
 import 'package:ccp_starter/example/ui/components/example_chart/example_pie_chart.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main2/controllers/example_main2_controller.dart';
@@ -13,9 +14,15 @@ class ExampleMain2Screen extends GetView<ExampleMain2Controller> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorBrown,
+      appBar: buildAppBar(),
       body: buildBody(),
     );
   }
+
+  PreferredSizeWidget buildAppBar() => const CustomAppBar(
+        title: 'Custom App Bar',
+        color: colorLightBrown,
+      );
 
   Widget buildBody() {
     return ListView(

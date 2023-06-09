@@ -1,6 +1,8 @@
+import 'package:ccp_starter/example/data/dummy_data.dart';
 import 'package:ccp_starter/example/themes/example_insets.dart';
 import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/example_app_bar/example_custom_app_bar.dart';
+import 'package:ccp_starter/example/ui/components/example_carousel/example_carousel.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_column.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_row.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_section.dart';
@@ -25,18 +27,19 @@ class ExampleMain1Screen extends GetView<ExampleMain1Controller> {
 
   Widget buildBody() {
     return ListView(
-      padding: EdgeInsets.zero,
+      padding: EdgeInsets.only(bottom: marginBottomView.h),
       children: [
         buildSection(),
         buildRow(),
         buildColumn(),
+        buildCarousel(),
       ],
     );
   }
 
   PreferredSizeWidget buildAppBar() => const CustomAppBar(
         title: 'Custom App Bar',
-        color: colorDarkBlue,
+        color: colorLightBrown,
       );
 
   Widget buildSection() => ExampleCustomSection(
@@ -93,5 +96,9 @@ class ExampleMain1Screen extends GetView<ExampleMain1Controller> {
             style: const TextStyle(color: colorWhite),
           ),
         ),
+      );
+
+  Widget buildCarousel() => PemiluCarousel(
+        data: DummyData.chart,
       );
 }

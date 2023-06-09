@@ -22,14 +22,14 @@ class ExampleBottomNav extends StatelessWidget {
         ],
       ),
       child: BottomNavigationBar(
-        selectedItemColor: colorBlue,
+        selectedItemColor: colorWhite,
         unselectedItemColor: Colors.white.withOpacity(0.8),
         currentIndex: 0,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 12.sp,
         unselectedFontSize: 12.sp,
         showUnselectedLabels: true,
-        backgroundColor: colorDarkBlue,
+        backgroundColor: colorLightBrown,
         onTap: (index) => onTap(index),
         items: [
           BottomNavigationBarItem(
@@ -39,9 +39,8 @@ class ExampleBottomNav extends StatelessWidget {
                   : ExampleMyImage.iconMain1,
               width: 24.w,
               height: 32.h,
-              color: currentIndex == 0
-                  ? colorBlue
-                  : colorBlue.withOpacity(0.6),
+              color:
+                  currentIndex == 0 ? colorWhite : colorWhite.withOpacity(0.6),
             ),
             label: 'Home',
           ),
@@ -52,9 +51,8 @@ class ExampleBottomNav extends StatelessWidget {
                   : ExampleMyImage.iconMain2,
               width: 24.w,
               height: 32.h,
-              color: currentIndex == 1
-                  ? colorBlue
-                  : colorBlue.withOpacity(0.6),
+              color:
+                  currentIndex == 1 ? colorWhite : colorWhite.withOpacity(0.6),
             ),
             label: 'Search',
           ),
@@ -65,9 +63,8 @@ class ExampleBottomNav extends StatelessWidget {
                   : ExampleMyImage.iconMain3,
               width: 24.w,
               height: 32.h,
-              color: currentIndex == 2
-                  ? colorBlue
-                  : colorBlue.withOpacity(0.6),
+              color:
+                  currentIndex == 2 ? colorWhite : colorWhite.withOpacity(0.6),
             ),
             label: 'Camera',
           ),
@@ -78,9 +75,8 @@ class ExampleBottomNav extends StatelessWidget {
                   : ExampleMyImage.iconMain4,
               width: 24.w,
               height: 32.h,
-              color: currentIndex == 3
-                  ? colorBlue
-                  : colorBlue.withOpacity(0.6),
+              color:
+                  currentIndex == 3 ? colorWhite : colorWhite.withOpacity(0.6),
             ),
             label: 'Profile',
           ),
