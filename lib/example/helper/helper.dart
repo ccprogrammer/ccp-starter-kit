@@ -6,8 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class Helper {
-
-  showPopUp({
+  static showPopUp({
     String? title,
     String? message,
     Function()? onClose,
@@ -60,4 +59,15 @@ class Helper {
     ).then((value) => onClose != null ? onClose() : null);
   }
 
+  static String formatNumber(double number) {
+    if (number >= 1e9) {
+      return '${(number / 1e9).toStringAsFixed(1)}B'; // Convert to billions
+    } else if (number >= 1e6) {
+      return '${(number / 1e6).toStringAsFixed(1)}M'; // Convert to millions
+    } else if (number >= 1e3) {
+      return '${(number / 1e3).toStringAsFixed(1)}K'; // Convert to thousands
+    } else {
+      return number.toStringAsFixed(0); // No suffix needed
+    }
+  }
 }

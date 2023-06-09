@@ -36,7 +36,7 @@ class ApiService {
       if (isLog) log('$url res: $data');
 
       if (showErrorDialog && data['status'] == false) {
-        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+        Helper.showPopUp(title: 'Rejected', message: '${data['message']}');
       }
 
       return res(data, response);
@@ -47,7 +47,7 @@ class ApiService {
       var dioError = e.error;
 
       if (showErrorDialog) {
-        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+        Helper.showPopUp(title: '[$statusCode]', message: '$statusMessage');
       }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
@@ -92,7 +92,7 @@ class ApiService {
       if (isLog) log('$url res: $data');
 
       if (showErrorDialog && data['status'] == false) {
-        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+        Helper.showPopUp(title: 'Rejected', message: '${data['message']}');
       }
 
       return res(data, response);
@@ -103,7 +103,7 @@ class ApiService {
       var dioError = e.error;
 
       if (showErrorDialog) {
-        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+        Helper.showPopUp(title: '[$statusCode]', message: '$statusMessage');
       }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
@@ -148,7 +148,7 @@ class ApiService {
       if (isLog) log('$url res: $data');
 
       if (showErrorDialog && data['status'] == false) {
-        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+        Helper.showPopUp(title: 'Rejected', message: '${data['message']}');
       }
 
       return res(response.data, response);
@@ -159,7 +159,7 @@ class ApiService {
       var dioError = e.error;
 
       if (showErrorDialog) {
-        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+        Helper.showPopUp(title: '[$statusCode]', message: '$statusMessage');
       }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
@@ -198,13 +198,13 @@ class ApiService {
         data: body,
         options: Options(headers: requestHeaders),
       );
-      
+
       var data = response.data;
 
       if (isLog) log('$url res: $data');
 
       if (showErrorDialog && data['status'] == false) {
-        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+        Helper.showPopUp(title: 'Rejected', message: '${data['message']}');
       }
 
       return res(response.data, response);
@@ -215,7 +215,7 @@ class ApiService {
       var dioError = e.error;
 
       if (showErrorDialog) {
-        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+        Helper.showPopUp(title: '[$statusCode]', message: '$statusMessage');
       }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');

@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class DummyData {
-  static List partaiList = [
+  static List chart = [
     {
       'image':
           'https://i0.wp.com/bintankab.bawaslu.go.id/wp-content/uploads/2022/08/Perindo.webp?w=800&ssl=1',

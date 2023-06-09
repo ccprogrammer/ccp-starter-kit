@@ -8,6 +8,7 @@ class ExampleMyColor {
   static const Color colorBlue = Color(0xff1091DB);
   static const Color colorDarkBlue = Color(0xff0B112D);
   static const Color colorLightGrey = Color(0xffB5B5B5);
+  static const Color colorRed = Color(0xffEC1E27);
   static Color colorDarkGrey = const Color(0xff7A7979).withOpacity(0.4);
   static const Color colorGrey = Color(0xff7A7979);
 

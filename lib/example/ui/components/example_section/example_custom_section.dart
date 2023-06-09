@@ -10,10 +10,12 @@ class ExampleCustomSection extends StatelessWidget {
     required this.title,
     required this.child,
     this.actionTap,
+    this.trailing,
   });
   final Function? actionTap;
   final String title;
   final Widget child;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +51,16 @@ class ExampleCustomSection extends StatelessWidget {
                 ),
               ),
             ),
-            GestureDetector(
-              onTap: () => actionTap != null ? actionTap!() : null,
-              child: Icon(
-                Icons.chevron_right,
-                color: ExampleMyColor.colorWhite,
-                size: 20.w,
-              ),
-            ),
+            trailing != null
+                ? trailing!
+                : GestureDetector(
+                    onTap: () => actionTap != null ? actionTap!() : null,
+                    child: Icon(
+                      Icons.chevron_right,
+                      color: ExampleMyColor.colorWhite,
+                      size: 20.w,
+                    ),
+                  ),
           ],
         ),
       );
