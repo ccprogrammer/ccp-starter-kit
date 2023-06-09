@@ -2,7 +2,9 @@ import 'package:ccp_starter/example/data/dummy_data.dart';
 import 'package:ccp_starter/example/themes/example_insets.dart';
 import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/example_app_bar/example_custom_app_bar.dart';
+import 'package:ccp_starter/example/ui/components/example_app_bar/example_custom_fade_app_bar.dart';
 import 'package:ccp_starter/example/ui/components/example_carousel/example_carousel.dart';
+import 'package:ccp_starter/example/ui/components/example_image/custom_image_builder.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_column.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_row.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_section.dart';
@@ -19,23 +21,47 @@ class ExampleMain1Screen extends GetView<ExampleMain1Controller> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorBrown,
-      extendBodyBehindAppBar: false,
-      appBar: buildAppBar(),
       body: buildBody(),
     );
   }
 
   Widget buildBody() {
-    return ListView(
-      padding: EdgeInsets.only(bottom: marginBottomView.h),
-      children: [
-        buildSection(),
-        buildRow(),
-        buildColumn(),
-        buildCarousel(),
-      ],
+    return ExampleCustomFadeAppBar(
+      color: colorLightBrown,
+      title: 'Custom Fade AppBar',
+      child: (scrollController) => ListView(
+        controller: scrollController,
+        padding: EdgeInsets.only(bottom: marginBottomView.h),
+        children: [
+          buildBanner(),
+          buildCarousel(),
+          buildSection(),
+          buildRow(),
+          buildColumn(),
+        ],
+      ),
     );
   }
+
+  Widget buildBanner() => Container(
+        width: double.infinity,
+        height: 250.h,
+        decoration: const BoxDecoration(
+          color: colorLightBrown,
+        ),
+        child: ExampleCustomImageBuilder(
+          imageUrl:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRhyDX-0U5Znby3iJEeNWKR2Rjv5475ESAA&usqp=CAU',
+          child: (imageProvider) => Image(
+            image: imageProvider,
+            fit: BoxFit.cover,
+          ),
+        ),
+      );
+
+  Widget buildCarousel() => PemiluCarousel(
+        data: DummyData.chart,
+      );
 
   PreferredSizeWidget buildAppBar() => const CustomAppBar(
         title: 'Custom App Bar',
@@ -96,9 +122,5 @@ class ExampleMain1Screen extends GetView<ExampleMain1Controller> {
             style: const TextStyle(color: colorWhite),
           ),
         ),
-      );
-
-  Widget buildCarousel() => PemiluCarousel(
-        data: DummyData.chart,
       );
 }

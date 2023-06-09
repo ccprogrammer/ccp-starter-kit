@@ -2,8 +2,8 @@ import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-class Skeleton extends StatelessWidget {
-  const Skeleton({
+class ExampleSkeleton extends StatelessWidget {
+  const ExampleSkeleton({
     Key? key,
     this.height,
     this.width,

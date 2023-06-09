@@ -23,8 +23,8 @@ class ExampleBottomNav extends StatelessWidget {
       ),
       child: BottomNavigationBar(
         selectedItemColor: colorWhite,
-        unselectedItemColor: Colors.white.withOpacity(0.8),
-        currentIndex: 0,
+        unselectedItemColor: Colors.white.withOpacity(0.4),
+        currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 12.sp,
         unselectedFontSize: 12.sp,
@@ -40,7 +40,7 @@ class ExampleBottomNav extends StatelessWidget {
               width: 24.w,
               height: 32.h,
               color:
-                  currentIndex == 0 ? colorWhite : colorWhite.withOpacity(0.6),
+                  currentIndex == 0 ? colorWhite : colorWhite.withOpacity(0.4),
             ),
             label: 'Home',
           ),
