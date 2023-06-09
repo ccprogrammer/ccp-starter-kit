@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:ccp_starter/example/helper/helper.dart';
 import 'package:dio/dio.dart';
 
 class ApiService {
@@ -12,6 +13,7 @@ class ApiService {
     bool useBaseUrl = true,
     dynamic body,
     bool isLog = false,
+    bool showErrorDialog = false,
     required Function(dynamic res, Response response) res,
     required Function(int? statusCode, String? statusMessage,
             String? othersError, dynamic dioError)
@@ -29,14 +31,24 @@ class ApiService {
       Response response =
           await dio.get(url, options: Options(headers: requestHeaders));
 
-      if (isLog) log('$url res: ${response.data}');
+      var data = response.data;
 
-      return res(response.data, response);
+      if (isLog) log('$url res: $data');
+
+      if (showErrorDialog && data['status'] == false) {
+        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+      }
+
+      return res(data, response);
     } on DioException catch (e) {
       var statusCode = e.response?.statusCode;
       var statusMessage = e.response?.statusMessage;
       var othersError = e.message;
       var dioError = e.error;
+
+      if (showErrorDialog) {
+        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+      }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
 
@@ -54,6 +66,7 @@ class ApiService {
     bool useBaseUrl = true,
     Map<String, dynamic>? body,
     bool isLog = false,
+    bool showErrorDialog = false,
     required Function(dynamic res, Response response) res,
     required Function(int? statusCode, String? statusMessage,
             String? othersError, dynamic dioError)
@@ -74,14 +87,24 @@ class ApiService {
         options: Options(headers: requestHeaders),
       );
 
-      if (isLog) log('$url res: ${response.data}');
+      var data = response.data;
 
-      return res(response.data, response);
+      if (isLog) log('$url res: $data');
+
+      if (showErrorDialog && data['status'] == false) {
+        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+      }
+
+      return res(data, response);
     } on DioException catch (e) {
       var statusCode = e.response?.statusCode;
       var statusMessage = e.response?.statusMessage;
       var othersError = e.message;
       var dioError = e.error;
+
+      if (showErrorDialog) {
+        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+      }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
 
@@ -99,6 +122,7 @@ class ApiService {
     bool useBaseUrl = true,
     Map<String, dynamic>? body,
     bool isLog = false,
+    bool showErrorDialog = false,
     required Function(dynamic res, Response response) res,
     required Function(int? statusCode, String? statusMessage,
             String? othersError, dynamic dioError)
@@ -119,7 +143,13 @@ class ApiService {
         options: Options(headers: requestHeaders),
       );
 
-      if (isLog) log('$url res: ${response.data}');
+      var data = response.data;
+
+      if (isLog) log('$url res: $data');
+
+      if (showErrorDialog && data['status'] == false) {
+        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+      }
 
       return res(response.data, response);
     } on DioException catch (e) {
@@ -127,6 +157,10 @@ class ApiService {
       var statusMessage = e.response?.statusMessage;
       var othersError = e.message;
       var dioError = e.error;
+
+      if (showErrorDialog) {
+        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+      }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
 
@@ -144,6 +178,7 @@ class ApiService {
     bool useBaseUrl = true,
     Map<String, dynamic>? body,
     bool isLog = false,
+    bool showErrorDialog = false,
     required Function(dynamic res, Response response) res,
     required Function(int? statusCode, String? statusMessage,
             String? othersError, dynamic dioError)
@@ -163,8 +198,14 @@ class ApiService {
         data: body,
         options: Options(headers: requestHeaders),
       );
+      
+      var data = response.data;
 
-      if (isLog) log('$url res: ${response.data}');
+      if (isLog) log('$url res: $data');
+
+      if (showErrorDialog && data['status'] == false) {
+        Helper().showPopUp(title: 'Rejected', message: '${data['message']}');
+      }
 
       return res(response.data, response);
     } on DioException catch (e) {
@@ -172,6 +213,10 @@ class ApiService {
       var statusMessage = e.response?.statusMessage;
       var othersError = e.message;
       var dioError = e.error;
+
+      if (showErrorDialog) {
+        Helper().showPopUp(title: '[$statusCode]', message: '$statusMessage');
+      }
 
       log('endpoint === $endpoint \nstatusCode === $statusCode \nstatusMessage === $statusMessage \nothersError === $othersError \ndioError === $dioError');
 

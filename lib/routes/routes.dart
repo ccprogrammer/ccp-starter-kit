@@ -31,7 +31,7 @@ class GetRoutes {
       transition: Transition.noTransition,
     ),
 
-    // EXAMPLE SKELETON
+    // EXAMPLE STARTER KIT
     ...example.ExampleGetRoutes.screen,
   ];
 }

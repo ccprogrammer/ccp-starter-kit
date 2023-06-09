@@ -7,6 +7,7 @@ class ExampleScreen extends GetView<ExampleController> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     void exampleFunction() {
       controller.getData();
     }
