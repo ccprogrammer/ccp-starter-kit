@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 
 class ExampleSwiperIndicator extends StatelessWidget {
@@ -25,8 +25,8 @@ class ExampleSwiperIndicator extends StatelessWidget {
         if (showSwiper)
           Material(
             color: currentIndex == 0
-                ? ExampleMyColor.colorBrown
-                : ExampleMyColor.colorLightBrown,
+                ? colorBrown
+                : colorLightBrown,
             borderRadius: BorderRadius.circular(99),
             clipBehavior: Clip.antiAlias,
             child: IconButton(
@@ -37,7 +37,7 @@ class ExampleSwiperIndicator extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.chevron_left,
-                color: ExampleMyColor.colorWhite,
+                color: colorWhite,
               ),
             ),
           ),
@@ -47,13 +47,13 @@ class ExampleSwiperIndicator extends StatelessWidget {
           width: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(99),
-            color: ExampleMyColor.colorLightBrown,
+            color: colorLightBrown,
           ),
           child: Center(
             child: Text(
               '${currentIndex + 1}/$dataLength',
               style: const TextStyle(
-                color: ExampleMyColor.colorWhite,
+                color: colorWhite,
                 fontSize: 13,
               ),
             ),
@@ -63,8 +63,8 @@ class ExampleSwiperIndicator extends StatelessWidget {
         if (showSwiper)
           Material(
             color: currentIndex == dataLength - 1
-                ? ExampleMyColor.colorBrown
-                : ExampleMyColor.colorLightBrown,
+                ? colorBrown
+                : colorLightBrown,
             borderRadius: BorderRadius.circular(99),
             clipBehavior: Clip.antiAlias,
             child: IconButton(
@@ -75,7 +75,7 @@ class ExampleSwiperIndicator extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.chevron_right,
-                color: ExampleMyColor.colorWhite,
+                color: colorWhite,
               ),
             ),
           ),

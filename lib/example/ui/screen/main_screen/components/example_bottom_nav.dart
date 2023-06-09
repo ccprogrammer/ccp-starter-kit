@@ -1,5 +1,5 @@
 import 'package:ccp_starter/example/themes/example_image_url.dart';
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,14 +22,14 @@ class ExampleBottomNav extends StatelessWidget {
         ],
       ),
       child: BottomNavigationBar(
-        selectedItemColor: ExampleMyColor.colorBlue,
+        selectedItemColor: colorBlue,
         unselectedItemColor: Colors.white.withOpacity(0.8),
         currentIndex: 0,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 12.sp,
         unselectedFontSize: 12.sp,
         showUnselectedLabels: true,
-        backgroundColor: ExampleMyColor.colorDarkBlue,
+        backgroundColor: colorDarkBlue,
         onTap: (index) => onTap(index),
         items: [
           BottomNavigationBarItem(
@@ -40,8 +40,8 @@ class ExampleBottomNav extends StatelessWidget {
               width: 24.w,
               height: 32.h,
               color: currentIndex == 0
-                  ? ExampleMyColor.colorBlue
-                  : ExampleMyColor.colorBlue.withOpacity(0.6),
+                  ? colorBlue
+                  : colorBlue.withOpacity(0.6),
             ),
             label: 'Home',
           ),
@@ -53,8 +53,8 @@ class ExampleBottomNav extends StatelessWidget {
               width: 24.w,
               height: 32.h,
               color: currentIndex == 1
-                  ? ExampleMyColor.colorBlue
-                  : ExampleMyColor.colorBlue.withOpacity(0.6),
+                  ? colorBlue
+                  : colorBlue.withOpacity(0.6),
             ),
             label: 'Search',
           ),
@@ -66,8 +66,8 @@ class ExampleBottomNav extends StatelessWidget {
               width: 24.w,
               height: 32.h,
               color: currentIndex == 2
-                  ? ExampleMyColor.colorBlue
-                  : ExampleMyColor.colorBlue.withOpacity(0.6),
+                  ? colorBlue
+                  : colorBlue.withOpacity(0.6),
             ),
             label: 'Camera',
           ),
@@ -79,8 +79,8 @@ class ExampleBottomNav extends StatelessWidget {
               width: 24.w,
               height: 32.h,
               color: currentIndex == 3
-                  ? ExampleMyColor.colorBlue
-                  : ExampleMyColor.colorBlue.withOpacity(0.6),
+                  ? colorBlue
+                  : colorBlue.withOpacity(0.6),
             ),
             label: 'Profile',
           ),

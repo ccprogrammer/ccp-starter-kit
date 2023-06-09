@@ -1,5 +1,5 @@
 import 'package:ccp_starter/example/themes/example_insets.dart';
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/themes/example_textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,10 +34,10 @@ class ExampleCustomSection extends StatelessWidget {
 
   Widget buildTitle() => Container(
         margin: EdgeInsets.fromLTRB(
-          ExampleMyInsets.margin16.w,
-          ExampleMyInsets.margin24.h,
-          ExampleMyInsets.margin16.w,
-          ExampleMyInsets.margin16.h,
+          margin16.w,
+          margin24.h,
+          margin16.w,
+          margin16.h,
         ),
         child: Row(
           children: [
@@ -45,9 +45,9 @@ class ExampleCustomSection extends StatelessWidget {
               child: Text(
                 title,
                 style: TextStyle(
-                  color: ExampleMyColor.colorWhite,
+                  color: colorWhite,
                   fontSize: 14.sp,
-                  fontWeight: ExampleMyText.medium,
+                  fontWeight: medium,
                 ),
               ),
             ),
@@ -57,7 +57,7 @@ class ExampleCustomSection extends StatelessWidget {
                     onTap: () => actionTap != null ? actionTap!() : null,
                     child: Icon(
                       Icons.chevron_right,
-                      color: ExampleMyColor.colorWhite,
+                      color: colorWhite,
                       size: 20.w,
                     ),
                   ),

@@ -1,11 +1,11 @@
-import 'package:ccp_starter/example/ui/screen/main_screen/controllers/example_main_controller.dart';
+import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main2/controllers/example_main2_controller.dart';
 import 'package:get/get.dart';
 
-class ExampleMainBinding extends Bindings {
+class ExampleMain2Binding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<ExampleMainController>(
-      () => ExampleMainController(),
+    Get.lazyPut<ExampleMain2Controller>(
+      () => ExampleMain2Controller(),
     );
   }
 }

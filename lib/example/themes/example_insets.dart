@@ -1,8 +1,6 @@
-class ExampleMyInsets {
-  static const double margin8 = 8;
-  static const double margin16 = 16;
-  static const double margin24 = 24;
-  static const double margin32 = 32;
+const double margin8 = 8;
+const double margin16 = 16;
+const double margin24 = 24;
+const double margin32 = 32;
 
-  static const double marginBottomView = 42;
-}
+const double marginBottomView = 42;

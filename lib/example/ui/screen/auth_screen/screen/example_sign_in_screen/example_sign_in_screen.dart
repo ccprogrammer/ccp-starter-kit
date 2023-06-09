@@ -1,6 +1,6 @@
 import 'package:ccp_starter/example/routes/example_routes.dart';
 import 'package:ccp_starter/example/themes/example_insets.dart';
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/example_button/example_button.dart';
 import 'package:ccp_starter/example/ui/components/example_text_field/example_text_field.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/screen/example_sign_in_screen/controllers/example_sign_in_controller.dart';
@@ -14,7 +14,7 @@ class ExampleSignInScreen extends GetView<ExampleSignInController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ExampleMyColor.colorBrown,
+      backgroundColor: colorBrown,
       body: buildBody(),
     );
   }
@@ -33,9 +33,9 @@ class ExampleSignInScreen extends GetView<ExampleSignInController> {
 
   Widget buildInputField() => Padding(
         padding: EdgeInsets.fromLTRB(
-          ExampleMyInsets.margin16.w,
-          ExampleMyInsets.margin24.h,
-          ExampleMyInsets.margin16.w,
+          margin16.w,
+          margin24.h,
+          margin16.w,
           0,
         ),
         child: Column(
@@ -59,19 +59,19 @@ class ExampleSignInScreen extends GetView<ExampleSignInController> {
 
   Widget buildButton() => Padding(
         padding: EdgeInsets.fromLTRB(
-            ExampleMyInsets.margin16.w,
-            ExampleMyInsets.margin24.h,
-            ExampleMyInsets.margin16.w,
+            margin16.w,
+            margin24.h,
+            margin16.w,
             0),
         child: Column(
           children: [
             ExampleButton(
-              marginTop: ExampleMyInsets.margin32.h,
+              marginTop: margin32.h,
               label: 'Log In',
               onTap: () {},
             ),
             ExampleButton(
-              marginTop: ExampleMyInsets.margin16.h,
+              marginTop: margin16.h,
               label: 'Register',
               borderColor: Colors.transparent,
               bgColor: Colors.transparent,

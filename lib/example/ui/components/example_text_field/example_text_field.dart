@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -52,8 +52,8 @@ class _ExampleTextFieldState extends State<ExampleTextField> {
           widget.label,
           style: TextStyle(
             color: isFocused
-                ? ExampleMyColor.colorBlue
-                : ExampleMyColor.colorLightGrey,
+                ? colorBlue
+                : colorLightGrey,
             fontSize: 14.sp,
           ),
         ),
@@ -64,8 +64,8 @@ class _ExampleTextFieldState extends State<ExampleTextField> {
               bottom: BorderSide(
                 width: 1.w,
                 color: isFocused
-                    ? ExampleMyColor.colorBlue
-                    : ExampleMyColor.colorDarkGrey,
+                    ? colorBlue
+                    : colorDarkGrey,
               ),
             ),
           ),
@@ -83,13 +83,13 @@ class _ExampleTextFieldState extends State<ExampleTextField> {
                     keyboardType: keyboardType,
                     style: TextStyle(
                       color: widget.isEnabled
-                          ? ExampleMyColor.colorWhite
-                          : ExampleMyColor.colorGrey,
+                          ? colorWhite
+                          : colorGrey,
                       fontSize: 14.sp,
                     ),
                     decoration: InputDecoration.collapsed(
                       hintStyle: TextStyle(
-                        color: ExampleMyColor.colorWhite.withOpacity(0.28),
+                        color: colorWhite.withOpacity(0.28),
                         fontSize: 14.sp,
                       ),
                       hintText: widget.hintText,
@@ -115,8 +115,8 @@ class _ExampleTextFieldState extends State<ExampleTextField> {
                             ? Icons.visibility_off_outlined
                             : Icons.visibility_outlined,
                         color: isFocused
-                            ? ExampleMyColor.colorBlue
-                            : ExampleMyColor.colorGrey.withOpacity(0.4),
+                            ? colorBlue
+                            : colorGrey.withOpacity(0.4),
                       ),
                     )
                   : const SizedBox(),

@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,7 +22,7 @@ class ExampleCardWrapper extends StatelessWidget {
           padding ?? EdgeInsets.all(12.w),
       margin: margin,
       decoration: BoxDecoration(
-        color: color ?? ExampleMyColor.colorLightBrown,
+        color: color ?? colorLightBrown,
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: child,

@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:ccp_starter/example/helper/helper.dart';
 import 'package:ccp_starter/example/themes/example_insets.dart';
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/example_indicator/example_swiper_indicator.dart';
 import 'package:ccp_starter/example/ui/components/example_section/example_custom_section.dart';
 import 'package:ccp_starter/example/ui/components/example_wrapper/example_card_wrapper.dart';
@@ -103,10 +103,8 @@ class ExampleChartState extends State<ExampleChart> {
         nextTap: () => nextChart(),
       ),
       child: ExampleCardWrapper(
-        margin: EdgeInsets.fromLTRB(ExampleMyInsets.margin16.w,
-            ExampleMyInsets.margin16.h, ExampleMyInsets.margin16.w, 0),
-        padding: EdgeInsets.fromLTRB(ExampleMyInsets.margin16.w,
-            ExampleMyInsets.margin24.h, ExampleMyInsets.margin16.w, 24.h),
+        margin: EdgeInsets.symmetric(horizontal: margin16.w),
+        padding: EdgeInsets.fromLTRB(margin16.w, margin24.h, margin16.w, 24.h),
         child: AspectRatio(
           aspectRatio: 1,
           child: Column(
@@ -117,7 +115,7 @@ class ExampleChartState extends State<ExampleChart> {
                     alignment: BarChartAlignment.spaceEvenly,
                     barTouchData: BarTouchData(
                       touchTooltipData: BarTouchTooltipData(
-                        tooltipBgColor: ExampleMyColor.colorDarkBlue,
+                        tooltipBgColor: colorDarkBlue,
                         getTooltipItem: (group, groupIndex, rod, rodIndex) {
                           var item = chartTab[groupIndex];
 
@@ -259,7 +257,7 @@ class ExampleChartState extends State<ExampleChart> {
                           Text(
                             'positive',
                             style: TextStyle(
-                              color: ExampleMyColor.colorWhite,
+                              color: colorWhite,
                               fontSize: 13.sp,
                             ),
                           ),
@@ -279,7 +277,7 @@ class ExampleChartState extends State<ExampleChart> {
                           Text(
                             'negative',
                             style: TextStyle(
-                              color: ExampleMyColor.colorWhite,
+                              color: colorWhite,
                               fontSize: 13.sp,
                             ),
                           ),
@@ -299,7 +297,7 @@ class ExampleChartState extends State<ExampleChart> {
                           Text(
                             'neutral',
                             style: TextStyle(
-                              color: ExampleMyColor.colorWhite,
+                              color: colorWhite,
                               fontSize: 13.sp,
                             ),
                           ),
@@ -392,7 +390,7 @@ BarChartGroupData makeGroupData(
             BarChartRodStackItem(y1 + y2, y1 + y2 + y3, Colors.blue[400]!),
 
             // negative y2
-            BarChartRodStackItem(y1, y1 + y2, ExampleMyColor.colorRed),
+            BarChartRodStackItem(y1, y1 + y2, colorRed),
 
             // positive y1
             BarChartRodStackItem(

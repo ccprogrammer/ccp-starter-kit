@@ -24,8 +24,8 @@ class ExampleCustomRow extends StatelessWidget {
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          left: ExampleMyInsets.margin16.w,
-          right: ExampleMyInsets.margin16.w,
+          left: margin16.w,
+          right: margin16.w,
           top: 0,
         ),
         scrollDirection: Axis.horizontal,
@@ -34,7 +34,7 @@ class ExampleCustomRow extends StatelessWidget {
             data.length,
             (index) => Padding(
               padding: EdgeInsets.only(
-                  left: index == 0 ? 0 : ExampleMyInsets.margin16.w),
+                  left: index == 0 ? 0 : margin16.w),
               child: item(
                 index,
                 data[index],

@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/components/example_bottom_nav.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/controllers/example_main_controller.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main1/example_main1_screen.dart';
@@ -42,7 +42,7 @@ class ExampleMainScreen extends GetView<ExampleMainController> {
             child: Text(
               'Example Main Not Found',
               style: TextStyle(
-                color: ExampleMyColor.colorWhite,
+                color: colorWhite,
                 fontSize: 14.sp,
               ),
             ),

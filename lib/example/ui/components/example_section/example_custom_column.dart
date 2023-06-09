@@ -23,8 +23,8 @@ class ExampleCustomColumn extends StatelessWidget {
       actionTap: () => actionTap != null ? actionTap!() : null,
       child: ListView.separated(
         padding: EdgeInsets.only(
-          left: ExampleMyInsets.margin16.w,
-          right: ExampleMyInsets.margin16.w,
+          left: margin16.w,
+          right: margin16.w,
           top: 0,
         ),
         physics: const NeverScrollableScrollPhysics(),

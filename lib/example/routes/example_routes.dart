@@ -7,6 +7,7 @@ import 'package:ccp_starter/example/ui/screen/example_init_app.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/bindings/example_main_binding.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/example_main_screen.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main1/bindings/example_main1_binding.dart';
+import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main2/bindings/example_main2_binding.dart';
 import 'package:ccp_starter/ui/screen/no_screen.dart';
 import 'package:get/get.dart';
 
@@ -63,6 +64,7 @@ class ExampleGetRoutes {
       bindings: [
         ExampleMainBinding(),
         ExampleMain1Binding(),
+        ExampleMain2Binding(),
       ],
     ),
   ];

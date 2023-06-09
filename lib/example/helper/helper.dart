@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/themes/example_textstyle.dart';
 import 'package:ccp_starter/example/ui/components/example_button/example_button.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class Helper {
           borderRadius: BorderRadius.circular(16),
         ),
         alignment: Alignment.center,
-        backgroundColor: ExampleMyColor.colorBrown,
+        backgroundColor: colorBrown,
         elevation: 8,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -28,9 +28,9 @@ class Helper {
                 Text(
                   title,
                   style: TextStyle(
-                    color: ExampleMyColor.colorWhite,
+                    color: colorWhite,
                     fontSize: 18.sp,
-                    fontWeight: ExampleMyText.medium,
+                    fontWeight: medium,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -40,9 +40,9 @@ class Helper {
                   child: Text(
                     message,
                     style: TextStyle(
-                      color: ExampleMyColor.colorWhite,
+                      color: colorWhite,
                       fontSize: 16.sp,
-                      fontWeight: ExampleMyText.regular,
+                      fontWeight: regular,
                     ),
                     textAlign: TextAlign.center,
                   ),

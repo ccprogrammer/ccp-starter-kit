@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/example_animation/example_bouncing_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,10 +13,10 @@ class ExampleButton extends StatelessWidget {
     this.marginTop = 0,
     this.marginRight = 0,
     this.marginBottom = 0,
-    this.bgColor = ExampleMyColor.colorBlue,
-    this.borderColor = ExampleMyColor.colorBlue,
+    this.bgColor = colorBlue,
+    this.borderColor = colorBlue,
     this.isLoading = false,
-    this.textColor = ExampleMyColor.colorWhite,
+    this.textColor = colorWhite,
     this.paddingLeft = 16,
     this.paddingTop = 0,
     this.paddingRight = 16,
@@ -60,9 +60,9 @@ class ExampleButton extends StatelessWidget {
                       width: 24.w,
                       height: 24.h,
                       child: CircularProgressIndicator(
-                        color: ExampleMyColor.colorWhite,
+                        color: colorWhite,
                         strokeWidth: 2.w,
-                        backgroundColor: ExampleMyColor.colorGrey,
+                        backgroundColor: colorGrey,
                       ),
                     ),
                   )

@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/themes/example_my_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/themes/example_textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -59,8 +59,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ? Text(
                 title,
                 style: TextStyle(
-                  color: ExampleMyColor.colorWhite,
-                  fontWeight: isBold ? ExampleMyText.bold : null,
+                  color: colorWhite,
+                  fontWeight: isBold ? bold : null,
                   fontSize: 16.sp,
                 ),
               )
