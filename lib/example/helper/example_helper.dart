@@ -150,11 +150,13 @@ class Helper {
     }
   }
 
-  static launchWhatsApp(
+  static Future launchWhatsApp(
       {required String phone, required String message}) async {
     String urls = 'https://wa.me/$phone?text=$message';
 
+    // ignore: deprecated_member_use
     if (await canLaunch(urls)) {
+      // ignore: deprecated_member_use
       await launch(urls);
     } else {
       throw 'Could not launch $urls';
@@ -162,7 +164,7 @@ class Helper {
     log('URLS == $urls');
   }
 
-  static launchMail(
+  static Future launchMail(
       {required String email,
       required String subject,
       required String body}) async {
