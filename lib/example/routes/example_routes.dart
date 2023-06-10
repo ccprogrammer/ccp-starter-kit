@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/ui/components/example_drawer/bindings/example_custom_drawer_binding.dart';
+import 'package:ccp_starter/example/ui/components/drawer/bindings/example_custom_drawer_binding.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/example_auth_screen.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/screen/example_sign_in_screen/bindings/example_sign_in_binding.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/screen/example_sign_in_screen/example_sign_in_screen.dart';
@@ -7,8 +7,8 @@ import 'package:ccp_starter/example/ui/screen/auth_screen/screen/example_sign_up
 import 'package:ccp_starter/example/ui/screen/example_init_app.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/bindings/example_main_binding.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/example_main_screen.dart';
-import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main1/bindings/example_main1_binding.dart';
-import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main2/bindings/example_main2_binding.dart';
+import 'package:ccp_starter/example/ui/screen/main_screen/screen/main1/bindings/example_main1_binding.dart';
+import 'package:ccp_starter/example/ui/screen/main_screen/screen/main2/bindings/example_main2_binding.dart';
 import 'package:ccp_starter/ui/screen/no_screen.dart';
 import 'package:get/get.dart';
 

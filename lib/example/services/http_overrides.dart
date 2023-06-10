@@ -10,7 +10,7 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 
-/*put this before runApp 
+/*put this before runApp in main.dart
 
   // HTTP REQUEST FIX
   HttpOverrides.global = MyHttpOverrides();
