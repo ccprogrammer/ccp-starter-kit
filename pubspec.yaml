@@ -35,12 +35,13 @@ dependencies:
   fl_chart: ^0.62.0
   flutter:
     sdk: flutter
+  flutter_html: ^2.2.1
   flutter_screenutil: ^5.8.1
   get: ^4.6.5
   loading_overlay: ^0.3.0
   photo_view: ^0.14.0
   pull_to_refresh: ^2.0.0
-  share_plus: ^7.0.2
+  share_plus: ^6.3.0
   shared_preferences: ^2.1.2
   shimmer: ^3.0.0
   url_launcher: 6.1.7
