@@ -10,8 +10,6 @@ import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Helper {
-
-
   // popup
   static showPopUp({
     String? title,
@@ -66,7 +64,67 @@ class Helper {
     ).then((value) => onClose != null ? onClose() : null);
   }
 
+  static showNotif(
+      {dynamic title,
+      dynamic message,
+      bool isDownload = false,
+      bool isError = false}) {
+    var titleText = title is String
+        ? Container(
+            margin: EdgeInsets.only(top: message == null ? 8 : 0),
+            child: Text(
+              title,
+              style: TextStyle(
+                color: colorWhite,
+                fontSize: 16.sp,
+                fontWeight: semiBold,
+              ),
+            ),
+          )
+        : title ?? const SizedBox();
 
+    var messageText = message is String
+        ? Text(
+            message,
+            style: TextStyle(
+              color: colorWhite.withOpacity(0.8),
+              fontSize: 14.sp,
+            ),
+          )
+        : message ?? const SizedBox();
+
+    if (isDownload) {
+      titleText = Text(
+        'Downloading',
+        style: TextStyle(
+          color: colorWhite,
+          fontSize: 16.sp,
+          fontWeight: semiBold,
+        ),
+      );
+      messageText = Padding(
+        padding: const EdgeInsets.only(top: 8),
+        child: LinearProgressIndicator(
+          backgroundColor: colorWhite.withOpacity(0.8),
+          color: colorBlue,
+        ),
+      );
+    }
+
+    Get.showSnackbar(
+      GetSnackBar(
+        titleText: titleText,
+        messageText: messageText,
+        dismissDirection: DismissDirection.up,
+        duration: const Duration(seconds: 3),
+        snackPosition: SnackPosition.TOP,
+        borderRadius: 12,
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+        backgroundColor: isError ? colorRed : colorLightBrown,
+        boxShadows: const [],
+      ),
+    );
+  }
 
   // number
   static String formatNumber(double number) {
@@ -121,10 +179,9 @@ class Helper {
     }
   }
 
-
   // text
   static String capitalizeWords(String input) {
-  // capitalize first letter on every word
+    // capitalize first letter on every word
     List<String> words = input.split(' ');
 
     for (int i = 0; i < words.length; i++) {
@@ -136,9 +193,8 @@ class Helper {
     return words.join(' ');
   }
 
-
   // sharing
-   static shareLayar(
+  static shareLayar(
       {required String title, required int id, bool isVideo = true}) {
     String endpoint = isVideo ? '?video_id=$id' : '/news?id=$id';
 
