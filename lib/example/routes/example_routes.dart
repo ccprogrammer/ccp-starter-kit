@@ -1,3 +1,4 @@
+import 'package:ccp_starter/example/ui/components/example_drawer/bindings/example_custom_drawer_binding.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/example_auth_screen.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/screen/example_sign_in_screen/bindings/example_sign_in_binding.dart';
 import 'package:ccp_starter/example/ui/screen/auth_screen/screen/example_sign_in_screen/example_sign_in_screen.dart';
@@ -62,6 +63,7 @@ class ExampleGetRoutes {
       page: () => const ExampleMainScreen(),
       transition: Transition.noTransition,
       bindings: [
+        ExampleCustomDrawerBinding(),
         ExampleMainBinding(),
         ExampleMain1Binding(),
         ExampleMain2Binding(),

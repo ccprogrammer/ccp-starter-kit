@@ -34,9 +34,7 @@ class ExampleBottomNav extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: Image.asset(
-              currentIndex == 0
-                  ? ExampleMyImage.iconMain1
-                  : ExampleMyImage.iconMain1,
+              currentIndex == 0 ? iconMain1 : iconMain1,
               width: 24.w,
               height: 32.h,
               color:
@@ -46,9 +44,7 @@ class ExampleBottomNav extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              currentIndex == 1
-                  ? ExampleMyImage.iconMain2
-                  : ExampleMyImage.iconMain2,
+              currentIndex == 1 ? iconMain2 : iconMain2,
               width: 24.w,
               height: 32.h,
               color:
@@ -58,9 +54,7 @@ class ExampleBottomNav extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              currentIndex == 2
-                  ? ExampleMyImage.iconMain3
-                  : ExampleMyImage.iconMain3,
+              currentIndex == 2 ? iconMain3 : iconMain3,
               width: 24.w,
               height: 32.h,
               color:
@@ -70,9 +64,7 @@ class ExampleBottomNav extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              currentIndex == 3
-                  ? ExampleMyImage.iconMain4
-                  : ExampleMyImage.iconMain4,
+              currentIndex == 3 ? iconMain4 : iconMain4,
               width: 24.w,
               height: 32.h,
               color:

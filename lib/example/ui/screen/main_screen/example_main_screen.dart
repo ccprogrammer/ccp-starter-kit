@@ -1,4 +1,5 @@
 import 'package:ccp_starter/example/themes/example_color.dart';
+import 'package:ccp_starter/example/ui/components/example_drawer/example_custom_drawer.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/components/example_bottom_nav.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/controllers/example_main_controller.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/screen/example_main1/example_main1_screen.dart';
@@ -16,8 +17,10 @@ class ExampleMainScreen extends GetView<ExampleMainController> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
+      key: controller.drawerKey,
       extendBodyBehindAppBar: true,
       bottomNavigationBar: buildBottomNav(),
+      drawer: const ExampleCustomDrawer(),
       body: buildBody(),
     );
   }

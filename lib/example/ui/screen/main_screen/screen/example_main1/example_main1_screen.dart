@@ -29,6 +29,12 @@ class ExampleMain1Screen extends GetView<ExampleMain1Controller> {
     return ExampleCustomFadeAppBar(
       color: colorLightBrown,
       title: 'Custom Fade AppBar',
+      leading: IconButton(
+        onPressed: () {
+          controller.openDrawer;
+        },
+        icon: const Icon(Icons.menu),
+      ),
       child: (scrollController) => ListView(
         controller: scrollController,
         padding: EdgeInsets.only(bottom: marginBottomView.h),
