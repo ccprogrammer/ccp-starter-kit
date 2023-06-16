@@ -26,16 +26,16 @@ class StarterApp extends StatelessWidget {
                   Get.toNamed(AppRoutes.init);
                 },
               ),
-              SizedBox(height: 16.h),
               ExampleButton(
                 label: 'Example',
+                marginTop: 16.h,
                 onTap: () {
                   Get.toNamed(ExampleAppRoutes.exampleInit);
                 },
               ),
-              SizedBox(height: 42.h),
               ExampleButton(
                 label: 'Clear Storage',
+                marginTop: 42.h,
                 onTap: () {
                   Services().clearStorage();
                 },

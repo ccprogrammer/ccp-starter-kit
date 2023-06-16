@@ -5,10 +5,10 @@ import 'package:ccp_starter/values/storage_key.dart';
 
 class Services {
   Future initApp() async {
-    bool keyAvailable = await checkInstanceKey(StorageKey.exampleIsFirstOpen);
+    bool keyAvailable = await checkInstanceKey(StorageKey.isFirstOpen);
     bool isFirstOpen = false;
     if (keyAvailable) {
-      isFirstOpen = await getInstanceBool(StorageKey.exampleIsFirstOpen);
+      isFirstOpen = await getInstanceBool(StorageKey.isFirstOpen);
     }
     if (isFirstOpen) {
       log('isFirstOpen');
@@ -17,8 +17,6 @@ class Services {
       firstOpenApp();
     }
   }
-
-  loginFlag() async => await setInstanceBool(StorageKey.isLoggedIn, true);
 
   firstOpenApp() async => await setInstanceBool(StorageKey.isFirstOpen, true);
 

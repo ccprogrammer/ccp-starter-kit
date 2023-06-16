@@ -11,7 +11,7 @@ class ExampleOnboardingScreen extends GetView<ExampleOnboardingController> {
       backgroundColor: Color(0xff1D1D1D),
       body: Center(
         child: Text(
-          'Onboarding Screen',
+          'Example Onboarding Screen',
           style: TextStyle(
             color: Colors.white,
             fontSize: 14,
