@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/values/example_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 
 import 'package:pull_to_refresh/pull_to_refresh.dart';

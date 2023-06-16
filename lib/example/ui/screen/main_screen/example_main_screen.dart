@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/values/example_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/drawer/example_custom_drawer.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/components/example_bottom_nav.dart';
 import 'package:ccp_starter/example/ui/screen/main_screen/controllers/example_main_controller.dart';

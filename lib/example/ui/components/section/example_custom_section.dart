@@ -1,6 +1,6 @@
-import 'package:ccp_starter/example/values/example_insets.dart';
-import 'package:ccp_starter/example/values/example_color.dart';
-import 'package:ccp_starter/example/values/example_textstyle.dart';
+import 'package:ccp_starter/example/themes/example_insets.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
+import 'package:ccp_starter/example/themes/example_textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

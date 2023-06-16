@@ -1,7 +1,7 @@
 import 'package:ccp_starter/example/ui/components/image/custom_image_builder.dart';
 import 'package:ccp_starter/example/ui/components/image/example_image_view.dart';
 import 'package:ccp_starter/example/ui/components/loading/example_custom_loading.dart';
-import 'package:ccp_starter/example/values/example_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

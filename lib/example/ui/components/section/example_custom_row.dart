@@ -1,4 +1,4 @@
-import 'package:ccp_starter/example/values/example_insets.dart';
+import 'package:ccp_starter/example/themes/example_insets.dart';
 import 'package:ccp_starter/example/ui/components/section/example_custom_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

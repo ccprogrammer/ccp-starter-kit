@@ -24,11 +24,11 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          // theme: ThemeData(
-          //   fontFamily: 'Inter-Tight',
-          //   // ignore: deprecated_member_use
-          //   androidOverscrollIndicator: AndroidOverscrollIndicator.stretch,
-          // ),
+          theme: ThemeData(
+            fontFamily: '',
+          ),
+
+          // change AppRoutes.starter to AppRoutes.init when example route is not needed anymore
           initialRoute: AppRoutes.starter,
           getPages: GetRoutes.screen,
         );

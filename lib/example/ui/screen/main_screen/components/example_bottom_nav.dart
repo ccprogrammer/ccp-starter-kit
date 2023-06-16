@@ -1,5 +1,5 @@
 import 'package:ccp_starter/example/values/example_image_url.dart';
-import 'package:ccp_starter/example/values/example_color.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

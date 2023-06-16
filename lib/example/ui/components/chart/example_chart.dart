@@ -1,6 +1,6 @@
 import 'package:ccp_starter/example/helper/example_helper.dart';
-import 'package:ccp_starter/example/values/example_insets.dart';
-import 'package:ccp_starter/example/values/example_color.dart';
+import 'package:ccp_starter/example/themes/example_insets.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/indicator/example_swiper_indicator.dart';
 import 'package:ccp_starter/example/ui/components/section/example_custom_section.dart';
 import 'package:ccp_starter/example/ui/components/wrapper/example_card_wrapper.dart';
