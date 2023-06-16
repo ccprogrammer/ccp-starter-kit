@@ -2,7 +2,7 @@ import 'package:ccp_starter/example/services/example_api_service.dart';
 import 'package:get/get.dart';
 
 class ExampleController extends GetxController {
-  ApiService api = ApiService();
+  ExampleApiService api = ExampleApiService();
 
   var isLoading = false.obs;
 
@@ -14,8 +14,8 @@ class ExampleController extends GetxController {
 
   getData() {}
 
-  getTest() {
-    api.get(
+  getTest() async {
+    await api.get(
       endpoint: 'users?page=1',
       isLog: true,
       res: (res, response) {},
@@ -23,8 +23,8 @@ class ExampleController extends GetxController {
     );
   }
 
-  postTest() {
-    api.post(
+  postTest() async {
+    await api.post(
       endpoint: 'https://reqres.in/api/users',
       useBaseUrl: false,
       isLog: true,
@@ -37,8 +37,8 @@ class ExampleController extends GetxController {
     );
   }
 
-  putTest() {
-    api.put(
+  putTest() async {
+    await api.put(
       endpoint: 'users/2',
       body: {"name": "morpheus", "job": "zion resident"},
       isLog: true,
@@ -47,8 +47,8 @@ class ExampleController extends GetxController {
     );
   }
 
-  deleteTest() {
-    api.delete(
+  deleteTest() async {
+    await api.delete(
       endpoint: 'users/2',
       isLog: true,
       res: (res, response) {},

@@ -24,18 +24,17 @@ class UserModel {
 
   // specifically for getx updating model
   static updateModel(UserModel user, dynamic profile) {
-    if (profile['id_user'] != null && profile['id_user'] != 0) {
-      user.userId = profile['id_user'];
-    }
-    if (profile['token'] != null && profile['token'] != '') {
-      user.userToken = profile['token'];
-    }
-    if (profile['user_email'] != null && profile['user_email'] != '') {
-      user.userEmail = profile['user_email'];
-    }
-    if (profile['user_name'] != null && profile['user_name'] != '') {
-      user.userEmail = profile['user_name'];
-    }
+    user.userId = profile['id_user'] ?? 0;
+    user.userToken = profile['token'] ?? '';
+    user.userEmail = profile['user_email'] ?? '';
+    user.userEmail = profile['user_name'] ?? '';
+
+    /* on test for null checking which is better
+    if (profile['id_user'] != null && profile['id_user'] != 0) {}
+    if (profile['token'] != null && profile['token'] != '') {}
+    if (profile['user_email'] != null && profile['user_email'] != '') {}
+    if (profile['user_name'] != null && profile['user_name'] != '') {}
+    */
   }
 
   String toJson() => json.encode(toMap());

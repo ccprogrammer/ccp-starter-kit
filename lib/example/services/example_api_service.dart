@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:ccp_starter/example/helper/example_helper.dart';
 import 'package:dio/dio.dart';
 
-class ApiService {
+class ExampleApiService {
   final Dio dio = Dio();
 
   static const _baseUrl = "https://reqres.in/api/";
