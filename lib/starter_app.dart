@@ -1,5 +1,5 @@
-
 import 'package:ccp_starter/example/routes/example_routes.dart';
+import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/button/example_button.dart';
 import 'package:ccp_starter/routes/routes.dart';
 import 'package:ccp_starter/services/services.dart';
@@ -13,13 +13,7 @@ class StarterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff1D1D1D),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.clear),
-        onPressed: () {
-          Services().clearStorage();
-        },
-      ),
+      backgroundColor: colorBrown,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -37,6 +31,13 @@ class StarterApp extends StatelessWidget {
                 label: 'Example',
                 onTap: () {
                   Get.toNamed(ExampleAppRoutes.exampleInit);
+                },
+              ),
+              SizedBox(height: 42.h),
+              ExampleButton(
+                label: 'Clear Storage',
+                onTap: () {
+                  Services().clearStorage();
                 },
               ),
             ],
