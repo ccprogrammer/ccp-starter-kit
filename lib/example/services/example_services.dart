@@ -8,7 +8,12 @@ import 'package:get/get.dart';
 
 class ExampleServices {
   Future initApp() async {
-    bool isFirstOpen = await checkInstanceKey(StorageKey.exampleIsFirstOpen);
+    bool keyAvailable = await checkInstanceKey(StorageKey.exampleIsFirstOpen);
+    bool isFirstOpen = false;
+    if (keyAvailable) {
+      isFirstOpen = await getInstanceBool(StorageKey.exampleIsFirstOpen);
+    }
+
     if (isFirstOpen) {
       log('exampleIsFirstOpen');
       Get.offAllNamed(ExampleAppRoutes.exampleMain);
@@ -25,6 +30,7 @@ class ExampleServices {
       await setInstanceBool(StorageKey.exampleIsFirstOpen, true);
 
   clearStorage() async {
+    log('Storage Cleared');
     await clearInstance();
   }
 }

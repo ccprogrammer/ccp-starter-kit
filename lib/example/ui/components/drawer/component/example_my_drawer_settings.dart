@@ -1,5 +1,5 @@
 import 'package:ccp_starter/example/values/example_image_url.dart';
-import 'package:ccp_starter/example/ui/components/drawer/additional_settings/drawer_setting_item.dart';
+import 'package:ccp_starter/example/ui/components/drawer/additional_settings/example_drawer_setting_item.dart';
 import 'package:ccp_starter/example/ui/components/drawer/controllers/example_custom_drawer_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -31,7 +31,7 @@ class ExampleCustomDrawerSettings
         itemBuilder: (context, index) {
           var item = settingList[index];
 
-          return DrawerSettingItem(
+          return ExampleDrawerSettingItem(
             item: item,
             onTap: () => Get.toNamed(item['routes']),
           );

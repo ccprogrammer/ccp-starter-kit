@@ -11,7 +11,7 @@ class ExampleCustomDrawerHeader extends StatelessWidget {
       width: double.infinity,
       height: 180.h,
       decoration: BoxDecoration(
-        color: colorBlue,
+        color: colorLightBrown,
         borderRadius: BorderRadius.only(
           bottomRight: Radius.circular(60.r),
         ),

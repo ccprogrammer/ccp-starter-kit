@@ -2,15 +2,15 @@ import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DrawerSettingSwitch extends StatefulWidget {
-  const DrawerSettingSwitch({super.key, this.item});
+class ExampleDrawerSettingSwitch extends StatefulWidget {
+  const ExampleDrawerSettingSwitch({super.key, this.item});
   final dynamic item;
 
   @override
-  State<DrawerSettingSwitch> createState() => _DrawerSettingSwitchState();
+  State<ExampleDrawerSettingSwitch> createState() => _ExampleDrawerSettingSwitchState();
 }
 
-class _DrawerSettingSwitchState extends State<DrawerSettingSwitch> {
+class _ExampleDrawerSettingSwitchState extends State<ExampleDrawerSettingSwitch> {
   bool switchValue = false;
   @override
   Widget build(BuildContext context) {

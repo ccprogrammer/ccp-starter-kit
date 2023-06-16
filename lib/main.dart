@@ -1,3 +1,4 @@
+import 'package:ccp_starter/controllers/auth_controller.dart';
 import 'package:ccp_starter/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,8 @@ void main() async {
 
   // SCREEN UTIL
   await ScreenUtil.ensureScreenSize();
+
+  Get.put(AuthController());
 
   runApp(const MyApp());
 }

@@ -16,8 +16,8 @@ class ExampleMainScreen extends GetView<ExampleMainController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
       key: controller.drawerKey,
+      extendBody: true,
       extendBodyBehindAppBar: true,
       bottomNavigationBar: buildBottomNav(),
       drawer: const ExampleCustomDrawer(),

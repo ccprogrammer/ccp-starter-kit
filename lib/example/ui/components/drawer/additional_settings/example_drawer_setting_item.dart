@@ -2,8 +2,8 @@ import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DrawerSettingItem extends StatelessWidget {
-  const DrawerSettingItem({super.key, this.item, required this.onTap});
+class ExampleDrawerSettingItem extends StatelessWidget {
+  const ExampleDrawerSettingItem({super.key, this.item, required this.onTap});
   final dynamic item;
   final Function onTap;
 

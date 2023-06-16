@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:ccp_starter/controllers/auth_controller.dart';
 import 'package:ccp_starter/routes/routes.dart';
 import 'package:ccp_starter/values/storage_key.dart';
 import 'package:get/get.dart';
@@ -9,7 +8,11 @@ import '../helper/shared_preferences.dart';
 
 class Services {
   Future initApp() async {
-    bool isFirstOpen = await checkInstanceKey(StorageKey.isFirstOpen);
+    bool keyAvailable = await checkInstanceKey(StorageKey.exampleIsFirstOpen);
+    bool isFirstOpen = false;
+    if (keyAvailable) {
+      isFirstOpen = await getInstanceBool(StorageKey.exampleIsFirstOpen);
+    }
     if (isFirstOpen) {
       log('isFirstOpen');
       Get.offAllNamed(AppRoutes.main);
@@ -18,8 +21,6 @@ class Services {
       Get.offAllNamed(AppRoutes.onBoarding);
       firstOpenApp();
     }
-
-    Get.put(AuthController());
   }
 
   loginFlag() async => await setInstanceBool(StorageKey.isLoggedIn, true);
@@ -27,6 +28,7 @@ class Services {
   firstOpenApp() async => await setInstanceBool(StorageKey.isFirstOpen, true);
 
   clearStorage() async {
+    log('Storage Cleared');
     await clearInstance();
   }
 }

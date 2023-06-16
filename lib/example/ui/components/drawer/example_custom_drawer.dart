@@ -1,6 +1,6 @@
 import 'package:ccp_starter/example/themes/example_color.dart';
 import 'package:ccp_starter/example/ui/components/drawer/component/example_custom_drawer_header.dart';
-import 'package:ccp_starter/example/ui/components/drawer/component/my_drawer_settings.dart';
+import 'package:ccp_starter/example/ui/components/drawer/component/example_my_drawer_settings.dart';
 import 'package:ccp_starter/example/ui/components/drawer/controllers/example_custom_drawer_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,11 +15,13 @@ class ExampleCustomDrawer extends GetView<ExampleCustomDrawerController> {
     return Drawer(
       width: Get.width * 0.9,
       backgroundColor: colorBrown,
-      child: Column(
-        children: [
-          buildHeader(),
-          buildSettings(),
-        ],
+      child: SafeArea(
+        child: Column(
+          children: [
+            buildHeader(),
+            buildSettings(),
+          ],
+        ),
       ),
     );
   }
